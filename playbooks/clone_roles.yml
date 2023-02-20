@@ -1,16 +1,16 @@
 ---
-- name: 
+- name:
   hosts: all
   become: true
   vars:
-    git_repository: "https://github.com/Panda-Academy-Core-2-0/Ansible_roles.git"
+    git_repository: "https://github.com/zax75ster/Ansible_roles.git"
     git_branch: "main"
   tasks:
     - name: Create a directory if it does not exist
       file:
         path: /etc/ansible/roles
         state: directory
-        mode: '0755'
+        mode: "0755"
     - name: Git checkout
       git:
         repo: "{{ git_repository }}"
