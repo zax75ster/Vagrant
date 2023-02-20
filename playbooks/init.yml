@@ -1,0 +1,14 @@
+---
+- name: 
+  hosts: all
+  become: true
+  vars:
+    docker_user:
+      - panda
+      - vagrant
+  roles: 
+    - user
+    - package
+    - geerlingguy.awscli
+    - geerlingguy.awscli_configure
+    - diodonfrost.terraform
