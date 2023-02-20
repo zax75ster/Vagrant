@@ -1,3 +1,5 @@
+VAGRANT_COMMAND = ARGV[0]
+
 Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-20.04"
  
